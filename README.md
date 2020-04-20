@@ -1,2 +1,2 @@
-# todo-app
-This repo includes a todo app
+# job-hub
+This repo includes inintial front-end of job-hub 
