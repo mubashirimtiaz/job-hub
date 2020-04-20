@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  labels:
+    app: frontend
+    name: jobhub
+  annotations:
+    CREATEDBY: "Mubashir Ali"
+    EMAIL: "mubashir.imtiaz123@gamil.com"
+  namespace: default
+spec:
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
+  replicas: 10
+  selector: 
+    matchLabels:
+      type: frontend
+      env: dev
+  template:
+    metadata:
+      labels:
+        type: frontend
+        env: dev
+    spec:
+      containers:
+      - name: jobhub-container
+        image: mubashirimtiaz/my-project:v1
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            port: 80
+            path: /
+        readinessProbe: 
+          tcpSocket:
+            port: 80
+      restartPolicy: Always
+       
+
+    

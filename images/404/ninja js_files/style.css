@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* main-container */
+
+.main-container{
+    margin: 0;
+    padding: 10px 0;
+    /* background-color: aquamarine; */
+    margin: auto;
+    font-size: 18px;
+}
+.main-container main form label{
+    margin: 8px 0;
+    display: block;
+    color: cadetblue;
+    font-weight: 600;
+
+}
+.main-container main h1,h2{
+    padding: 10px 0;
+}
+.main-container main h1::after,.main-container main h2::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: rgb(75, 127, 129);
+    border-radius:  5px 0 5px 0;
+}
+.main-container main form input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #dddddd;
+    transition: all 0.5s ease;
+
+}
+.main-container main input:hover,.main-container main input:focus{
+    box-shadow: inset 1px 1px 5px #dddddd;
+    border: 1px solid rgb(75, 127, 129);
+}
+
+/* main-container */
+
+/* main */
+
+.main-container main{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: 1px 1px 5px #aaaaaa;
+    /* background-color: blue; */
+}
+.main-container main section.section-1,.main-container main section.section-3{
+    background-color: #f7f7f7;
+}
+.main-container main section.section-1,.main-container main section.section-2,.main-container main section.section-3{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+
+}
+.main-container main section.section-2 ul{
+    list-style: none;
+    padding: 0; 
+    box-sizing: border-box;
+}
+.main-container main section.section-2 ul li:first-of-type{
+    border-top: 1px solid #aaaaaa;
+}
+.main-container main section.section-2 ul li{
+    padding: 5px 20px;
+    margin: 5px 0;
+    /* max-width: 700px; */
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #aaaaaa;
+    align-items: center;
+}
+.main-container main section.section-2 ul li .book-title{
+    flex: 5 0 0;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.main-container main section.section-2 ul li .delete{
+    cursor: pointer;
+    background: #f7f7f7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    flex: 1 0 0;
+    text-align: center;
+}
+.main-container main section.section-2 ul li .delete:hover,
+.main-container main section.section-2 ul li .delete:active{
+    background-color: crimson;
+    color: #f7f7f7;
+}
+
+
+.main-container main section.section-2 ul li::before{
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    background-color: cadetblue;
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+.main-container main section.section-2 ul li:hover::before{
+    background-color: rgb(51, 90, 92);
+}
+.main-container main section.section-3 form button{
+    margin: 10px 0;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 5px;
+    background-color: cadetblue;
+    border: 0;
+    box-shadow: 1px 1px 5px rgb(75, 127, 129);
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.main-container main section.section-3 form button:hover{
+    box-shadow: inset 1px 1px 5px rgb(51, 90, 92);
+
+}
+
+/* main */
